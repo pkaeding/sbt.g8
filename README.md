@@ -8,6 +8,7 @@
 - Informative `README.md` automatically generated.
 - Reasonable `scalac` and `javac` options chosen.
 - Optional settings provided commented out in generated `build.sbt`.
+- [sbt-release](https://github.com/sbt/sbt-release) plugin integrated, for tagging and publishing releases
 
 ## Use this template ##
 

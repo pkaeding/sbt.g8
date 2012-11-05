@@ -64,6 +64,8 @@ logLevel in compile := Level.Warn
 
 traceLevel := 5
 
+releaseSettings
+
 /* publishing */
 publishMavenStyle := true
 
