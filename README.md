@@ -15,7 +15,7 @@
 - Get the g8 template and run it:
 
 ```sh
-$ g8 ymasory/sbt
+$ g8 pkaeding/sbt
 $ cd <name-of-app>
 $ ./sbt
 > run
@@ -24,7 +24,7 @@ $ ./sbt
 ## Modify this template ##
 
 - [Install sbt](https://github.com/harrah/xsbt/wiki/Getting-Started-Setup), version 0.12.0 or higher.
-- Fork [ymasory/sbt.g8](https://github.com/ymasory/sbt.g8) on GitHub to your account.
+- Fork [pkaeding/sbt.g8](https://github.com/pkaeding/sbt.g8) on GitHub to your account.
 Let's assume your account is "foo".
 - Clone it.
 
