@@ -7,28 +7,14 @@ version := "$project_version$"
 
 description := "$project_description$"
 
-homepage := Some(url("https://github.com/$github_username$/$github_repo_name$"))
+//homepage := Some(url("https://github.com/$github_username$/$github_repo_name$"))
 
-startYear := Some(2012)
-
-licenses := Seq(
-  ("$project_license_name$", url("$project_license_url$"))
-)
-
-scmInfo := Some(
-  ScmInfo(
-    url("https://github.com/$github_username$/$github_repo_name$"),
-    "scm:git:https://github.com/$github_username$/$github_repo_name$.git",
-    Some("scm:git:git@github.com:$github_username$/$github_repo_name$.git")
-  )
-)
-
-// organizationName := "My Company"
+startYear := Some(2013)
 
 /* scala versions and options */
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.1"
 
-// crossScalaVersions := Seq("2.9.1")
+crossScalaVersions := Seq("2.10.0", "2.10.1")
 
 offline := false
 
@@ -43,9 +29,9 @@ mainClass in (Compile, run) := Some("$project_group_id$.$project_artifact_id$.Ma
 
 /* dependencies */
 libraryDependencies ++= Seq (
-  // "org.scalaz" %% "scalaz-core" % "7.0.0-M3",
-  // "org.scalaz" %% "scalaz-effect" % "7.0.0-M3",
-  // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+  "org.scalaz" %% "scalaz-core" % "7.0.0-M9",
+  "org.scalaz" %% "scalaz-effect" % "7.0.0-M9",
+  "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
 )
 
 /* you may need these repos */
@@ -65,17 +51,6 @@ logLevel in compile := Level.Warn
 traceLevel := 5
 
 releaseSettings
-
-/* publishing */
-publishMavenStyle := true
-
-publishTo <<= version { (v: String) =>
-  val nexus = "https://oss.sonatype.org/"
-  if (v.trim.endsWith("SNAPSHOT")) Some(
-    "snapshots" at nexus + "content/repositories/snapshots"
-  )
-  else Some("releases" at nexus + "service/local/staging/deploy/maven2")
-                      }
 
 publishArtifact in Test := false
 
